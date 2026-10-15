@@ -1,0 +1,24 @@
+import '../modelos/carta.dart';
+import 'baraja.dart';
+import 'tabla.dart';
+import 'verificador_patrones.dart';
+
+/// Orquesta las piezas ya probadas: canta, marca y detecta la Lotería.
+class MotorJuego {
+  final Baraja baraja;
+  final Tabla tabla;
+  bool haGanado = false;
+
+  MotorJuego({required this.baraja, required this.tabla});
+
+  Carta? cantarYMarcar() {
+    final carta = baraja.cantarSiguiente();
+    if (carta == null) return null;
+
+    tabla.marcar(carta);
+    if (VerificadorPatrones.hayGanador(tabla.marcadas)) {
+      haGanado = true;
+    }
+    return carta;
+  }
+}
