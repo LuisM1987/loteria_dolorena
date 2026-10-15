@@ -1,10 +1,2 @@
 # Loteria Dolorena (TDD)
-
-Contiene lib/ (modelos, logica, main.dart), test/ (4 archivos, 17 pruebas) y pubspec.yaml.
-Las carpetas android/ y web/ las genera Flutter.
-
-## Pasos
-    flutter create .
-    flutter pub get
-    flutter test              (deben pasar 17 pruebas)
-    flutter run -d chrome     (o -d edge; flutter run para Android)
+<img width="921" height="267" alt="image" src="https://github.com/user-attachments/assets/b6f5fa36-54ff-4f5e-bf33-7a9816ea4bdb" />
